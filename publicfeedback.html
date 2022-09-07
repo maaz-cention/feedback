@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style>
+		.smsFeedback {
+			display: block;
+			position: absolute;
+			margin: 0 auto;
+			text-align: center;
+			width: 100%;
+			top: 50%;
+			font-family: Verdana;
+			font-size: 12px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="feedbackform" class="smsFeedback">
+		<span id="feedbackspan"></span>
+		<div> &nbsp;</div>
+		<br><br>
+		<div style="font-family: Verdana; font-size: 12px;">satisfy?</div>
+		<a href="https://local.cust.cention.se/ng/public#satisfaction/preview/meter/answer/4d6a45304d413d3d/83ebda2c8713ff8b36cc1f5b18f7285e"
+			style="font-family:Verdana; font-size:10pt; color:Black; font-weight:Normal;">Very satisfy</a><br><a
+			href="https://local.cust.cention.se/ng/public#satisfaction/preview/meter/answer/4d6a45304d413d3d/b5b9d0e28c9ce76710dc9fd65350650b"
+			style="font-family:Verdana; font-size:10pt; color:Black; font-weight:Normal;">Good</a><br><a
+			href="https://local.cust.cention.se/ng/public#satisfaction/preview/meter/answer/4d6a45304d413d3d/f7deaea309fd283d3fd932239e453ff8"
+			style="font-family:Verdana; font-size:10pt; color:Black; font-weight:Normal;">So so</a><br><a
+			href="https://local.cust.cention.se/ng/public#satisfaction/preview/meter/answer/4d6a45304d413d3d/3a9b95a55247057a3d088c615bce4bbe"
+			style="font-family:Verdana; font-size:10pt; color:Black; font-weight:Normal;">Bad</a><br><a
+			href="https://local.cust.cention.se/ng/public#satisfaction/preview/meter/answer/4d6a45304d413d3d/203c979ad4e32e03b224ea9056f0e2ed"
+			style="font-family:Verdana; font-size:10pt; color:Black; font-weight:Normal;">Worst</a><br><br>
+		<br>
+	</div>
+
+	<script>
+		var htmlMessage = {{.htmlMessage }};
+		var errorMessage = {{.errorMessage }};
+		function show(p) {
+			if (htmlMessage != "") {
+				p.innerHTML = htmlMessage
+			} else {
+				p.innerHTML = errorMessage
+			}
+		}
+		show(document.getElementById("feedbackspan"));
+	</script>
+</body>
+
+</html>
